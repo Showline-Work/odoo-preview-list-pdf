@@ -25,35 +25,20 @@ Key Features
   for clean, professional PDF output.
 * **Beautiful Styling** — Clean, modern table design with branded header colors, 
   alternating rows, and professional typography.
-* **License Protected** — One-time license key activation per database. Includes 
-  automatic periodic validation to ensure continuous operation.
 * **Fast & Efficient** — Optimized data fetching and rendering for large datasets.
 * **Custom PDF Viewer** — Opens in a dedicated window with Print and Download 
   buttons for easy document handling.
 * **Loading Animation** — Professional Lottie-powered loading overlay with progress 
   tracking while the PDF is being generated.
 
-How It Works
-------------
+Usage
+-----
 
 1. Navigate to any list view in Odoo (Sales Orders, Contacts, Products, etc.).
 2. Configure your columns, filters, and pagination as desired.
 3. Click the **"Preview PDF"** button in the control panel.
 4. A loading overlay appears with a professional animation and progress bar.
 5. The PDF opens in a new window showing exactly the data from your current view.
-
-License Activation
-------------------
-
-This module requires a one-time license key to activate. To activate:
-
-1. Go to **Settings → General Settings → Preview List PDF**.
-2. Enter your license key in the format `XXXX-XXXX-XXXX-XXXX`.
-3. Click **"Activate License"**.
-4. Once activated, the license is validated periodically to ensure continued access.
-
-**Note:** The module includes a built-in license manager with automatic validation 
-via scheduled actions (every 12 hours).
 
 Technical Notes
 ---------------
@@ -69,18 +54,15 @@ About Showline Solutions
 
 This module was developed by **Showline Solutions**, delivering professional 
 Odoo customizations and business solutions.
-
     """,
     "author": "Showline Solutions",
     "website": "https://showline.co.zw",
-    "license": "OPL-1",
+    "license": "LGPL-3",
     "depends": ["base", "web"],
     "data": [
         "security/ir.model.access.csv",
-        "data/license_data.xml",
         "views/client_action.xml",
         "views/preview_templates.xml",
-        "views/license_views.xml",
     ],
     "assets": {
         "web.assets_backend": [
