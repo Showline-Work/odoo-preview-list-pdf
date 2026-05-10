@@ -16,12 +16,7 @@ patch(ListController.prototype, {
         this._lottieLoaded = false;
 
         onWillStart(async () => {
-            try {
-                const ok = await this.orm.call("preview.list.license.manager", "is_license_valid", [[]]);
-                if (ok) {
-                    setTimeout(() => this._addPdfButton(), 200);
-                }
-            } catch (e) {}
+            setTimeout(() => this._addPdfButton(), 200);
         });
     },
 
