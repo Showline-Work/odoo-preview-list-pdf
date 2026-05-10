@@ -14,9 +14,6 @@ class PreviewListPdfController(http.Controller):
     def preview_pdf(self, model_name, domain="[]", fields="[]", labels="[]", limit=80, offset=0, total=0, **kwargs):
         start_time = time.time()
         
-        if not request.env["preview.list.license.manager"].sudo()._is_license_valid():
-            return request.not_found()
-        
         try:
             parsed_domain = safe_eval(unquote_plus(domain)) if domain and domain != "[]" else []
         except:
